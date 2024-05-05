@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 13</title>
+</head>
+<body>
+    <h1>JavaScript Student Marksheet</h1>
+    <form onsubmit="event.preventDefault(); marksheet(); ">
+        <label for="" >Name: </label>
+        <input type="text" id="name" value=""  placeholder="Name" required>
+        <br>
+        <label for="">Islamiat: </label>
+        <input type="number" min="1" max="100"  id="islamiat" value="" placeholder="Islamiat" required>
+        <br>
+        <label for="">Math: </label>
+        <input type="number" min="1" max="100" id="math" value=""  placeholder="Math" required>
+        <br>
+        <label for="">English: </label>
+        <input type="number" min="1" max="100"  id="eng" value=""  placeholder="English" required>
+        <br>
+        <label for="">Urdu: </label>
+        <input type="number" min="1" max="100"  id="urdu" value=""  placeholder="Urdu" required>
+        <br>
+        <label for="">Science: </label>
+        <input type="number" min="1" max="100"  id="science" value=""  placeholder="Science" required>
+        <br>
+        <button type="submit" >Submit</button>
+    </form>
+</body>
+<script>
+    // Create a function that accepts parameters from the user and print the user name.
+    function username(fname, lname){
+       document.write("Hello " + fname + " " + lname )
+    }
+    username(prompt("First Name"), prompt("Last Name"));
+
+
+    function marksheet(){
+        // Take student name from input and store in a variable.
+        var name=document.getElementById("name").value
+
+        // Take marks as input of any five subjects, and store in a variable. 
+        var sub_islamiat=parseInt(document.getElementById("islamiat").value)
+
+        var sub_math=parseInt(document.getElementById("math").value)
+
+        var sub_eng=parseInt(document.getElementById("eng").value)
+
+        var sub_urdu=parseInt(document.getElementById("urdu").value)
+
+        var sub_science=parseInt(document.getElementById("science").value)
+
+        // Store total marks 500 in a variable.
+        var total_marks= 500;
+
+        // Calculate obtain marks, percentage and grade. (operators).
+        var obt_marks= sub_islamiat + sub_math + sub_eng + sub_urdu + sub_science ;
+        var cal_per;
+        var percentage;
+        var grade;
+        var passing_marks = 30;
+        var status;
+
+        // For grades you need to use condition (if, if-else , if else-if else). 
+        if(sub_islamiat < passing_marks || sub_math < passing_marks || sub_eng < passing_marks || sub_urdu < passing_marks || sub_science < passing_marks ){
+            grade = "";
+            percentage = ""; 
+            status = "";
+        }else{
+            cal_per = (obt_marks / total_marks) * 100;
+            percentage = cal_per.toFixed();
+                if (cal_per >=80 && cal_per <=100) {
+                    grade = "A";
+                } else if (cal_per >=60 && cal_per <=80) {
+                    grade = "B";
+                } else if (cal_per >=40 && cal_per <=60) {
+                    grade = "C";
+                } else if (cal_per >=30 && cal_per <=40) {
+                    grade = "D";
+                } else {
+                    grade = "";
+                }
+        }
+        status = (grade === "") ? "Failed" : "Passed";
+
+
+        // Show/Print student name with marks of subjects individually, show obtain marks from total marks, show percentage and show grade.
+    
+        print_marks(name, sub_islamiat, sub_math, sub_eng, sub_urdu, sub_science, obt_marks, total_marks, status, percentage, grade)
+    }
+    
+    function print_marks(name, sub_islamiat, sub_math, sub_eng, sub_urdu, sub_science, obt_marks, total_marks, status, percentage, grade) {
+        var resultContainer = document.createElement("div");
+        resultContainer.innerHTML = `
+            <h2>Student Name: ${name}</h2>
+            <p>Islamiat: ${sub_islamiat}</p>
+            <p>Math: ${sub_math}</p>
+            <p>English: ${sub_eng}</p>
+            <p>Urdu: ${sub_urdu}</p>
+            <p>Science: ${sub_science}</p>
+            <p>Obtained Marks: ${obt_marks}</p>
+            <p>Total Marks: ${total_marks}</p>
+            <p>Status: ${status}</p>
+            <p>Percentage: ${percentage}%</p>
+            <p>Grade: ${grade}</p>
+        `;
+        document.body.appendChild(resultContainer);
+    }
+
+    
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment_16</title>
+</head>
+<body>
+        <!-- Heading1 For Apply Color and Text Changing Functions -->
+    <h1 id="mytext">Hello World</h1>
+
+        <!-- This Button for Change Text "Hello World" Into "Hello JavaScript" -->
+    <button onclick="change_text()">Change Text</button>
+
+        <!-- This Button for Change Default Color Into Red Color -->
+    <button onclick="text_color_change()">Change Color Into Red</button>
+
+</body>
+
+<script>
+        // Function for change heading1 text  "Hello World"   Into   "Hello JavaScript"
+    function change_text(){
+        document.getElementById('mytext').innerText = "Hello JavaScript";
+    }
+
+        // Function for change heading1 text color in red
+    function text_color_change(){
+        document.getElementById('mytext').style.color = "red";
+    }
+</script>
+</html>
