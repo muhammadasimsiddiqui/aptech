@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <hr />
+    <h3 id="myh3">H3</h3>
+    <button id="change">Change</button>
+    <hr />
+    <form>
+      <label for="name">Name :</label>
+      <input type="text" id="name" />
+      <input type="button" id="showname" value="Show" />
+      <h2 id="setname">My Name is :</h2>
+    </form>
+    <hr />
+    <form>
+      <label for="password">Password :</label>
+      <input type="password" id="pswd" />
+      <br />
+      <input type="button" id="showpass" value="Show Password" /> &nbsp; | &nbsp;
+      <input type="button" id="hidepass" value="Hide Password" /> 
+    </form>
+    <hr>
+    <img src="images/light - off.png" alt="Bulb Image" id="bulb" height="250" width="auto" >
+    <button id="changeBulb">ON</button>
+    <button id="changeBulbOff">OFF</button>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+      $("document").ready(function () {
+        //Show and Hide
+
+        $("#hide").click(function () {
+          $("h1").hide(2000);
+        });
+
+        $("#show").click(function () {
+          $("h1").show(2000);
+        });
+
+        $("#toggle").click(function () {
+          $("h1").toggle(2000);
+        });
+
+        //Change the content
+
+        $("#change").click(function () {
+          $("#myh3").text("This is my Heading");
+        });
+
+        $("#showname").click(function () {
+          var myname = $("#name").val();
+          $("#setname").append(myname);
+          //$('#setname').text(myname)
+        });
+
+        //Change the attribute
+
+        $("#showpass").click(function () {
+          $("#pswd").attr("type", "text");
+        });
+
+        $("#hidepass").click(function () {
+          $("#pswd").attr("type", "password");
+        });
+
+
+        $('#changeBulb').click(function(){
+            $('#bulb').attr('src','images/light - on.png');
+            $('body').css('background-color','black');
+            $('body').css('color','white');
+
+        })
+
+        $('#changeBulbOff').click(function(){
+            $('#bulb').attr('src','images/light - off.png');
+            $('body').css('background-color','white')
+            $('body').css('color','black');
+        })
+
+
+      });
+
+    </script>
+  </body>
+</html>

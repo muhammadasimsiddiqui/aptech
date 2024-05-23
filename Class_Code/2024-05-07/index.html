@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery</title>
+  </head>
+  <body>
+    <h1 id="myh1">Hello</h1>
+    <h1 id="myh2">World</h1>
+    <button id="hidebtn">Click to hide</button>
+    <button id="showbtn">Click to show</button>
+    <button id="togglebtn">Click Toggle</button>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+      $(document).ready(function () {
+
+        // $('#hidebtn').click(function(){
+        //     $('#myh1').hide(2000);
+        // });
+
+        // $('#showbtn').click(function(){
+        //     $('#myh1').show(2000);
+        // });
+
+        $('#togglebtn').click(function(){
+            $('#myh1').toggle(2000);
+        });
+
+      });
+    </script>
+  </body>
+</html>
