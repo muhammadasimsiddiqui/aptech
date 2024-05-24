@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main-hst">
+        <div   id="hst">
+          <img src="images/light - off.png" alt="Bulb Image" id="bulb" height="250" width="auto" >
+          <h1 id="head">
+            Heading
+          </h1>
+          <h4  id="subhead">
+            Lorem ipsum dolor sit amet.
+          </h4>
+          <p  id="des">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex harum quos magnam minima quibusdam explicabo  aspernatur hic placeat assumenda accusamus!
+          </p>
+          <div>
+            <h4>Bulb On Off Buttons</h4>
+            <button id="bulbon">ON</button>
+            <button id="bulboff">OFF</button>
+          </div>
+          <br>
+          <div>
+            <button id="change">Change Details</button>
+          </div>
+        </div>
+        
+        <br>
+        <hr />
+        <div>
+          <button id="hide">Hide</button>
+          <button id="show">Show</button>
+          <button id="toggle">Toggle</button>
+        </div>
+        <hr />
+        <br>
+
+    </div>
+
+
+
+    <form>
+      <label for="password">Password :</label>
+      <input type="password" id="pswd" />
+      <br />
+      <br>
+      <input type="button" id="showpass" value="Show Password" /> &nbsp; | &nbsp;
+      <input type="button" id="hidepass" value="Hide Password" /> 
+    </form>
+
+
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+      $("document").ready(function () {
+
+        //Show and Hide
+
+        $("#hide").click(function () {
+          $("#hst").hide(2000);
+        });
+
+        $("#show").click(function () {
+          $("#hst").show(2000);
+        });
+
+        $("#toggle").click(function () {
+          $("#hst").toggle(2000);
+        });
+
+        // Change Picture and background color
+
+        $('#bulbon').click(function(){
+            $('#bulb').attr('src','images/light - on.png');
+            $('#main-hst').css('background-color','black');
+            $('#main-hst').css('color','white');
+
+        })
+
+        $('#bulboff').click(function(){
+            $('#bulb').attr('src','images/light - off.png');
+            $('#main-hst').css('background-color','white')
+            $('#main-hst').css('color','black');
+        })
+
+        //Change the content
+
+        $("#change").click(function () {
+          $("#head").text("Title");
+          $("#subhead").text("Sub Heading");
+          $("#des").text("Description");
+        });
+
+        $("#showname").click(function () {
+          var myname = $("#name").val();
+          $("#setname").append(myname);
+        });
+
+        //Change the attribute
+
+        $("#showpass").click(function () {
+          $("#pswd").attr("type", "text");
+        });
+
+        $("#hidepass").click(function () {
+          $("#pswd").attr("type", "password");
+        });
+
+      });
+
+    </script>
+  </body>
+</html>
