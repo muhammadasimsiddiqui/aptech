@@ -1,0 +1,48 @@
+Here are five companies that offer free web hosting services:
+
+1. **Netlify**
+   - **Website:** [netlify.com](https://www.netlify.com/)
+   - **Features:**
+     - Free tier available with 100 GB bandwidth per month.
+     - Continuous deployment from GitHub, GitLab, and Bitbucket.
+     - Automated builds and deploys.
+     - Free SSL/TLS certificates.
+     - Custom domains with HTTPS.
+
+2. **Vercel**
+   - **Website:** [vercel.com](https://vercel.com/)
+   - **Features:**
+     - Free tier available with unlimited number of sites.
+     - Continuous deployment from Git repositories.
+     - Serverless functions and edge caching.
+     - Custom domains with HTTPS.
+     - Easy integration with various frameworks like Next.js.
+
+3. **000webhost**
+   - **Website:** [000webhost.com](https://www.000webhost.com/)
+   - **Features:**
+     - Free tier with 300 MB disk space and 3 GB bandwidth per month.
+     - Free subdomain or use your own custom domain.
+     - PHP and MySQL support.
+     - Website builder with templates.
+     - No ads.
+
+4. **InfinityFree**
+   - **Website:** [infinityfree.net](https://www.infinityfree.net/)
+   - **Features:**
+     - Free hosting with unlimited disk space and bandwidth.
+     - Free subdomain or use your own custom domain.
+     - PHP and MySQL support.
+     - Free SSL certificates.
+     - No ads.
+
+5. **AwardSpace**
+   - **Website:** [awardspace.com](https://www.awardspace.com/)
+   - **Features:**
+     - Free tier with 1 GB disk space and 5 GB monthly traffic.
+     - One email account and MySQL database.
+     - Free subdomain or use your own custom domain.
+     - Website builder and CMS installer.
+     - No ads.
+
+These services provide a range of features suitable for personal projects, small websites, and learning purposes. Each has its own limitations and strengths, so the best choice depends on your specific needs.
